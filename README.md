@@ -22,7 +22,7 @@ module "config" {
   rules          = ["cloud-trail-cloud-watch-logs-enabled", "cloudtrail-enabled", "cloud-trail-log-file-validation-enabled"]
 }
 ```
-
+<!-- BEGINNING OF TERRAFORM DOCS HOOK -->
 ## Requirements
 
 No requirements.
@@ -45,6 +45,7 @@ No requirements.
 ## Outputs
 
 No output.
+<!-- END OF TERRAFORM DOCS HOOK -->
 
 ## Caveats
 
