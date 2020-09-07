@@ -45,6 +45,7 @@ No requirements.
 ## Outputs
 
 No output.
+
 <!-- END OF TERRAFORM DOCS HOOK -->
 
 ## Caveats
