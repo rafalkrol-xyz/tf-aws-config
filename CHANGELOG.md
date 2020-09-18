@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/rafalkrol-xyz/tf-aws-config/compare/v1.0.0...v1.0.1) (2020-09-18)
+
+
+### Fix
+
+* test ([c05f92c](https://github.com/rafalkrol-xyz/tf-aws-config/commit/c05f92c54e289feecf86653508a9d9675345d6e3))
+
 # 1.0.0 (2020-09-18)
 
 
