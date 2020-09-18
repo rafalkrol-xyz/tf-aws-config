@@ -23,28 +23,6 @@ module "config" {
 }
 ```
 <!-- BEGINNING OF TERRAFORM DOCS HOOK -->
-## Requirements
-
-No requirements.
-
-## Providers
-
-| Name | Version |
-|------|---------|
-| aws | n/a |
-
-## Inputs
-
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
-| master | A flag indicating the master account. NB only one per organization is permitted | `bool` | `false` | no |
-| rules | A list of of AWS Config Managed Rules to be applied. Must be one of the following: https://docs.aws.amazon.com/config/latest/developerguide/managed-rules-by-aws-config.html | `list(string)` | `null` | no |
-| s3\_bucket\_name | After the terraform docs: 'The name of the S3 bucket used to store the configuration history.' | `string` | n/a | yes |
-| tags | A map of tags to assign to the resources that support the use of them | `map(string)` | `null` | no |
-
-## Outputs
-
-No output.
 
 <!-- END OF TERRAFORM DOCS HOOK -->
 
