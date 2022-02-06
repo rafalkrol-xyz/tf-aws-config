@@ -7,8 +7,42 @@ within your [AWS Organizations](https://aws.amazon.com/organizations/) organizat
 
 ## Pre-requisites
 
-+ the [AWS Organizations](https://aws.amazon.com/organizations/) service is used
-  + if not, you must handle the [authorization of the Config aggregator](https://docs.aws.amazon.com/config/latest/developerguide/authorize-aggregator-account-console.html) yourself.
+* the [AWS Organizations](https://aws.amazon.com/organizations/) service is used
+  * if not, you must handle the [authorization of the Config aggregator](https://docs.aws.amazon.com/config/latest/developerguide/authorize-aggregator-account-console.html) yourself.
+
+### Prerequisites for pre-commit-terraform
+
+**a)** dependencies
+
+The [pre-commit-terraform](https://github.com/antonbabenko/pre-commit-terraform) util requires the latest versions of the following dependencies:
+
+* [pre-commit](https://pre-commit.com/#install)
+* [terraform-docs](https://github.com/terraform-docs/terraform-docs)
+* [tflint](https://github.com/terraform-linters/tflint)
+* [tfsec](https://github.com/aquasecurity/tfsec)
+* [terrascan](https://github.com/accurics/terrascan)
+
+On macOS, you can install the above with [brew](https://brew.sh/):
+
+```bash
+brew install pre-commit terraform-docs tflint tfsec terrascan
+```
+
+**b)** usage
+
+The tool will run automatically before each commit if [git hooks scripts](https://pre-commit.com/#3-install-the-git-hook-scripts) are installed in the project's root:
+
+```bash
+pre-commit install
+```
+
+For a manual run, execute the below command:
+
+```bash
+pre-commit run -a
+```
+
+**NB the configuration file is located in `.pre-commit-config.yaml`**
 
 ## Usage
 
@@ -53,9 +87,53 @@ module "config" {
 ### PARENT MODULE - END
 ```
 
-<!-- BEGINNING OF TERRAFORM DOCS HOOK -->
+<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Requirements
 
-<!-- END OF TERRAFORM DOCS HOOK -->
+No requirements.
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
+
+## Modules
+
+No modules.
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [aws_config_config_rule.rule](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/config_config_rule) | resource |
+| [aws_config_configuration_aggregator.aggregator_account](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/config_configuration_aggregator) | resource |
+| [aws_config_configuration_recorder.default](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/config_configuration_recorder) | resource |
+| [aws_config_configuration_recorder_status.default](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/config_configuration_recorder_status) | resource |
+| [aws_config_delivery_channel.default](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/config_delivery_channel) | resource |
+| [aws_iam_policy.s3_bucket_permissions](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_policy) | resource |
+| [aws_iam_policy.s3_objects_permissions](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_policy) | resource |
+| [aws_iam_role.aggregator](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role) | resource |
+| [aws_iam_role.default](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role) | resource |
+| [aws_iam_role_policy_attachment.aggregator](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy_attachment) | resource |
+| [aws_iam_role_policy_attachment.custom_config_service_role_policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy_attachment) | resource |
+| [aws_iam_role_policy_attachment.s3_bucket_permissions](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy_attachment) | resource |
+| [aws_iam_role_policy_attachment.s3_objects_permissions](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy_attachment) | resource |
+| [aws_iam_service_linked_role.config](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_service_linked_role) | resource |
+| [aws_caller_identity.current](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/caller_identity) | data source |
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_aggregator_account"></a> [aggregator\_account](#input\_aggregator\_account) | A flag indicating the aggregator\_account account. NB only one per organization is permitted | `bool` | `false` | no |
+| <a name="input_rules"></a> [rules](#input\_rules) | A list of of AWS Config Managed Rules to be applied. Must be one of the following: https://docs.aws.amazon.com/config/latest/developerguide/managed-rules-by-aws-config.html | `list(string)` | `null` | no |
+| <a name="input_s3_bucket_name"></a> [s3\_bucket\_name](#input\_s3\_bucket\_name) | After the terraform docs: 'The name of the S3 bucket used to store the configuration history.' | `string` | n/a | yes |
+
+## Outputs
+
+No outputs.
+<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Caveats
 
