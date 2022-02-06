@@ -1,3 +1,14 @@
+# [2.0.0](https://github.com/rafalkrol-xyz/tf-aws-config/compare/v1.0.1...v2.0.0) (2022-02-06)
+
+
+### Breaking
+
+* remove support for tags, add github workflows, add pre commit hooks for TF ([0db899f](https://github.com/rafalkrol-xyz/tf-aws-config/commit/0db899ff1d4d323622f9b4a73093e7004e35a1dc))
+
+### New
+
+* test ([4849726](https://github.com/rafalkrol-xyz/tf-aws-config/commit/484972696647be0caf60ffbed83e6f367744c039))
+
 ## [1.0.1](https://github.com/rafalkrol-xyz/tf-aws-config/compare/v1.0.0...v1.0.1) (2020-09-18)
 
 
