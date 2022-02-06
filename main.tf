@@ -1,7 +1,6 @@
 resource "aws_config_configuration_aggregator" "aggregator_account" {
   count = var.aggregator_account ? 1 : 0
   name  = "organization-config-aggregator"
-  tags  = var.tags
 
   organization_aggregation_source {
     all_regions = true
@@ -39,7 +38,6 @@ resource "aws_config_config_rule" "rule" {
   name                        = each.key
   description                 = "https://docs.aws.amazon.com/config/latest/developerguide/${each.key}.html"
   maximum_execution_frequency = "TwentyFour_Hours"
-  tags                        = var.tags
 
   source {
     owner             = "AWS"
