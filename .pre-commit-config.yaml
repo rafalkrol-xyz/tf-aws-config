@@ -1,0 +1,9 @@
+repos:
+  - repo: https://github.com/antonbabenko/pre-commit-terraform
+    rev: v1.62.3 # Get the latest from: https://github.com/antonbabenko/pre-commit-terraform/releases
+    hooks:
+      - id: terraform_fmt # https://www.terraform.io/docs/cli/commands/fmt.html
+      - id: terraform_docs # https://github.com/terraform-docs/terraform-docs
+      - id: terraform_tflint # https://github.com/terraform-linters/tflint
+      - id: terraform_tfsec # https://github.com/aquasecurity/tfsec
+      - id: terrascan # https://github.com/accurics/terrascan``
