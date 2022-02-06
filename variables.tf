@@ -3,8 +3,8 @@ variable "s3_bucket_name" {
   type        = string
 }
 
-variable "master" {
-  description = "A flag indicating the master account. NB only one per organization is permitted"
+variable "aggregator_account" {
+  description = "A flag indicating the aggregator_account account. NB only one per organization is permitted"
   type        = bool
   default     = false
 }

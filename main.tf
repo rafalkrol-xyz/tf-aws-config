@@ -1,5 +1,5 @@
-resource "aws_config_configuration_aggregator" "master" {
-  count = var.master ? 1 : 0
+resource "aws_config_configuration_aggregator" "aggregator_account" {
+  count = var.aggregator_account ? 1 : 0
   name  = "organization-config-aggregator"
   tags  = var.tags
 
@@ -10,7 +10,7 @@ resource "aws_config_configuration_aggregator" "master" {
 }
 
 resource "aws_config_configuration_recorder" "default" {
-  role_arn = var.master ? aws_iam_service_linked_role.config[0].arn : aws_iam_role.default[0].arn
+  role_arn = var.aggregator_account ? aws_iam_service_linked_role.config[0].arn : aws_iam_role.default[0].arn
 
   recording_group {
     all_supported                 = true
