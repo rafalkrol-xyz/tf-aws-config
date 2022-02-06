@@ -14,9 +14,3 @@ variable "rules" {
   type        = list(string)
   default     = null
 }
-
-variable "tags" {
-  description = "A map of tags to assign to the resources that support the use of them"
-  type        = map(string)
-  default     = null
-}

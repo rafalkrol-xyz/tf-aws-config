@@ -9,7 +9,6 @@ resource "aws_iam_role" "aggregator" {
   name               = "customConfigAggregatorRole"
   path               = "/service-role/"
   description        = "AWS Organizations-related permissions for the AWS Config Aggregator"
-  tags               = var.tags
   assume_role_policy = <<EOF
 {
   "Version": "2012-10-17",
@@ -41,7 +40,6 @@ resource "aws_iam_role" "default" {
   name               = "customConfigRoleForSubAccount"
   path               = "/service-role/"
   description        = "Add the necessary S3 permissions to the regular AWS Config ones"
-  tags               = var.tags
   assume_role_policy = <<EOF
 {
   "Version": "2012-10-17",
