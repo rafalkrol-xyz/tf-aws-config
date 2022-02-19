@@ -1,3 +1,14 @@
+# [2.2.0](https://github.com/rafalkrol-xyz/tf-aws-config/compare/v2.1.0...v2.2.0) (2022-02-19)
+
+
+### Docs
+
+* make a test change ([c26bdc4](https://github.com/rafalkrol-xyz/tf-aws-config/commit/c26bdc4d8e5f8c9f1bbba8e442f8d256134915e1))
+
+### New
+
+* reuse existing workflows ([426c414](https://github.com/rafalkrol-xyz/tf-aws-config/commit/426c414e3d7f1c137ae99613290ccaf4191b4b0a))
+
 # [2.1.0](https://github.com/rafalkrol-xyz/tf-aws-config/compare/v2.0.0...v2.1.0) (2022-02-19)
 
 
