@@ -7,7 +7,7 @@ on:
 
 jobs:
   call-tf-docs-workflow:
-    uses: rafalkrol-xyz/github-actions-workflows/.github/workflows/terraform_docs.yml@v1.1.0
+    uses: rafalkrol-xyz/github-actions-workflows/.github/workflows/terraform_docs.yml@v1.1.1
   call-changelog-workflow:
-    uses: rafalkrol-xyz/github-actions-workflows/.github/workflows/changelog.yml@v1.1.0
+    uses: rafalkrol-xyz/github-actions-workflows/.github/workflows/changelog.yml@v1.1.1
     needs: call-tf-docs-workflow
