@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/rafalkrol-xyz/tf-aws-config/compare/v2.0.0...v2.1.0) (2022-02-19)
+
+
+### New
+
+* make the workflow reusable ([8d6036b](https://github.com/rafalkrol-xyz/tf-aws-config/commit/8d6036b2de3dad0ae2332209a91d298ee4dc99ab))
+
 # [2.0.0](https://github.com/rafalkrol-xyz/tf-aws-config/compare/v1.0.1...v2.0.0) (2022-02-06)
 
 
