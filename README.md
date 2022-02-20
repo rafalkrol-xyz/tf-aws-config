@@ -5,8 +5,12 @@
 A lightweight [Terraform module](https://www.terraform.io/docs/configuration/modules.html) for enabling [AWS Config](https://aws.amazon.com/config/)
 within your [AWS Organizations](https://aws.amazon.com/organizations/) organization.
 
-## Pre-requisites
+## Prerequisites
 
+* [AWS IAM user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users.html) with adequate privileges
+* [AWS CLI v2](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html) that's properly [configured](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html)
+* [Terraform](https://www.terraform.io/)
+  * NB you can use [`tfswitch`](https://tfswitch.warrensbox.com/) to manage different versions of Terraform
 * the [AWS Organizations](https://aws.amazon.com/organizations/) service is used
   * if not, you must handle the [authorization of the Config aggregator](https://docs.aws.amazon.com/config/latest/developerguide/authorize-aggregator-account-console.html) yourself.
 
