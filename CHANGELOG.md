@@ -1,3 +1,16 @@
+## [2.2.1](https://github.com/rafalkrol-xyz/tf-aws-config/compare/v2.2.0...v2.2.1) (2022-02-20)
+
+
+### Docs
+
+* update the prerequisites section ([52372cf](https://github.com/rafalkrol-xyz/tf-aws-config/commit/52372cfa0d717e324571db938aaa13b0ae50235d))
+
+### Fix
+
+* more test changes ([37094a4](https://github.com/rafalkrol-xyz/tf-aws-config/commit/37094a4f5936989d4098ef35d670c4ee8eb08360))
+* remove build ([8617d55](https://github.com/rafalkrol-xyz/tf-aws-config/commit/8617d558bae0ad5b0bd6801e97a70cb5ad31caa0))
+* update the versions ([8c27e6d](https://github.com/rafalkrol-xyz/tf-aws-config/commit/8c27e6df9ac8bf4c887895a7ab08dcdac3543e8b))
+
 # [2.2.0](https://github.com/rafalkrol-xyz/tf-aws-config/compare/v2.1.0...v2.2.0) (2022-02-19)
 
 
